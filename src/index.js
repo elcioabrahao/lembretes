@@ -22,6 +22,8 @@ app.put('/lembretes', async (req, res) => {
             contador,
             texto,
         },
+    }).catch((err) => {
+        console.log("err", err);
     });
     res.status(201).send(lembretes[contador]);
 });
